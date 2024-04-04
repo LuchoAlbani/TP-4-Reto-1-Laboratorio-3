@@ -1,10 +1,15 @@
 package com.tenis.producto.view;
 
-import com.tenis.producto.model.JuegoTenis;
+import com.tenis.producto.enums.Clima;
+import com.tenis.producto.enums.Estadio;
+
 import java.util.Scanner;
 
 public class ViewJuego {
     Scanner scanner = new Scanner(System.in);
+
+    Estadio estadio;
+    Clima clima;
 
     public void seleccioneEstadio() {
         System.out.println("Seleccione el estadio donde desea jugar: ");
@@ -17,32 +22,31 @@ public class ViewJuego {
 
         switch (opcion) {
             case 1:
-                System.out.printf("Seleccionaste Casa Rosada como estadio!");
-                this. = JuegoTenis.Estadio.CASAROSADA;
+                System.out.println("Seleccionaste Casa Rosada como estadio!");
+                estadio = Estadio.CASAROSADA;
                 break;
 
             case 2:
-                System.out.printf("Seleccionaste Bombonera como estadio!");
-                JuegoTenis.Estadio bombonera = JuegoTenis.Estadio.BOMBONERA;
+                System.out.println("Seleccionaste Bombonera como estadio!");
+                estadio = Estadio.BOMBONERA;
                 break;
 
             case 3:
-                System.out.printf("Seleccionaste el Mudomental como estadio!");
-                JuegoTenis.Estadio monumental = JuegoTenis.Estadio.MONUMENTAL;
+                System.out.println("Seleccionaste el Monumental como estadio!");
+                 estadio = Estadio.MONUMENTAL;
                 break;
 
             case 4:
-                System.out.printf("Seleccionaste la UTN como estadio!");
-                JuegoTenis.Estadio utn = JuegoTenis.Estadio.UTN;
+                System.out.println("Seleccionaste la UTN como estadio!");
+                estadio = Estadio.UTN;
                 break;
 
             default:
-                System.out.printf("La opcion ingresada es incorrecta..., seleccionado la Bombonera por defecto");
-                JuegoTenis.Estadio bombonera1 = JuegoTenis.Estadio.BOMBONERA;
+                System.out.println("La opcion ingresada es incorrecta..., seleccionado la Bombonera por defecto");
+                estadio = Estadio.BOMBONERA;
                 break;
 
         }
-
 
     }
 
@@ -56,34 +60,39 @@ public class ViewJuego {
 
         switch (opcion){
             case 1:
-                System.out.printf("Seleccionaste Soleado!");
-                JuegoTenis.Clima soleado = JuegoTenis.Clima.SOLEADO;
+                System.out.println("Seleccionaste Soleado!");
+                clima = Clima.SOLEADO;
                 break;
 
             case 2:
-                System.out.printf("Seleccionaste Nublado!");
-                JuegoTenis.Clima nublado = JuegoTenis.Clima.NUBLADO;
+                System.out.println("Seleccionaste Nublado!");
+                 clima = Clima.NUBLADO;
                 break;
 
             case 3:
-                System.out.printf("Seleccionaste LLuvioso!");
-                JuegoTenis.Clima lluvioso = JuegoTenis.Clima.LLUVIOSO;
+                System.out.println("Seleccionaste LLuvioso!");
+                 clima = Clima.LLUVIOSO;
                 try {
                     Thread.sleep(2000);
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
-                System.out.printf("Se suspende por lluvia X_X...");
+                System.out.println("Se suspende por lluvia X_X...");
                 Integer retornar = 0;
 
                 break;
 
             default:
-                System.out.printf("La opcion ingresada es incorrecta..., seleccionado clima soleado por defecto");
-                JuegoTenis.Clima soleado1 = JuegoTenis.Clima.SOLEADO;
+                System.out.println("La opcion ingresada es incorrecta..., seleccionado clima soleado por defecto");
+                 clima = Clima.SOLEADO;
                 break;
 
         }
+    }
+
+    public void seleccionPersonaje(){
+
+
 
 
     }
