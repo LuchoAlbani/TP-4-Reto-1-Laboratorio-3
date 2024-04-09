@@ -1,14 +1,13 @@
 
 import com.tenis.producto.controller.ControladorJuego;
-import com.tenis.producto.view.ViewJuego;
 
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
 
-        ViewJuego juego = new ViewJuego();
         ControladorJuego iniciar = new ControladorJuego();
 
         System.out.println("BIENVENIDO AL JUEGO DE TENIS!");
@@ -18,18 +17,15 @@ public class Main {
         while (true){
             int opcion = scanner.nextInt();
 
-            switch (opcion){
-                case 1:
-                    iniciar.iniciarJuego();
-                    break;
+            if (opcion == 1) {
+                iniciar.play();
+            } else {
+                System.out.println("Saliendo del juego...");
 
-                default:
-                    System.out.println("Saliendo del juego...");
-
-                    return;
-
+                return;
             }
         }
+
 
     }
 }

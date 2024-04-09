@@ -10,6 +10,10 @@ public class Personaje{
 
     private String manoDominante;
 
+    public Personaje(){
+
+    }
+
     public Personaje(String nombre, String nacionalidad, Float edad, String manoDominante) {
         this.nombre = nombre;
         this.nacionalidad = nacionalidad;

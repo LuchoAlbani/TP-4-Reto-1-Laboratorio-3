@@ -6,11 +6,7 @@ import com.tenis.producto.enums.Estadio;
 import java.util.Scanner;
 
 public class JuegoTenis {
-
-    Scanner scanner = new Scanner(System.in);
     private Personaje P1;
-
-    private Personaje P2;
 
     private Estadio estadio;
 
@@ -33,9 +29,8 @@ public class JuegoTenis {
         this.clima = clima;
     }
 
-    public JuegoTenis(Personaje p1, Personaje p2, Estadio estadio, Clima clima) {
+    public JuegoTenis(Personaje p1, Estadio estadio, Clima clima) {
         P1 = p1;
-        P2 = p2;
         this.estadio = estadio;
         this.clima = clima;
     }
@@ -47,19 +42,5 @@ public class JuegoTenis {
     public void setP1(Personaje p1) {
         P1 = p1;
     }
-
-    public Personaje getP2() {
-        return P2;
-    }
-
-    public void setP2(Personaje p2) {
-        P2 = p2;
-    }
-
-
-
-
-
-
 
 }
