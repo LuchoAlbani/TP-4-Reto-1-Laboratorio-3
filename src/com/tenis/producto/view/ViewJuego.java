@@ -67,7 +67,7 @@ public class ViewJuego {
                 System.out.println("Seleccionaste LLuvioso!");
                 clima = Clima.LLUVIOSO;
                 System.out.println("Se suspende por lluvia X_X...");
-                Integer retornar = 0;
+                System.exit(0);
 
                 break;
 
@@ -118,52 +118,50 @@ public class ViewJuego {
 
     }
 
-
     // Método para incrementar la puntuación
     public void incrementarPuntos() {
 
-        System.out.println("  " + personaje1.getNombre() + "vs P2");
+        System.out.println("  " + personaje1.getNombre() + " vs P2");
 
-        System.out.println("   " + estado + "  " + personaje1.getNombre() + " vs  " + estado + "  P2  ");
-        //pausa();
-        if (estado == "Love") { //15 - Love
+        System.out.println("  " + estado + " vs " + estado); // 0 - 0
+
+        if (puntos == 0) { //15 - Love
             puntos = 15;
-            System.out.println("  " + puntos + "   " + personaje1.getNombre() + "  vs  " + estado + "  P2  ");
-            //pausa();
-        } else if (puntos == 15) {  //30 - Love
+            System.out.println("  " + puntos + "  vs  " + estado);
+            pausa();
+        }if (puntos == 15) {  //30 - Love
             puntos = 30;
-            System.out.println("  " + puntos + "  " + personaje1.getNombre() + "  vs  " + estado + "  P2  ");
-            //pausa();
-        } else if (puntos == 30) { // 30 - 15
+            System.out.println("  " + puntos + "  vs  " + estado);
+            pausa();
+        }if (puntos == 30) { // 30 - 15
              puntoP2 = 15;
-            System.out.println("  " + puntos + "  " + personaje1.getNombre() + "  vs  " + puntoP2 + "  P2  ");
-            //pausa();
-        } else if (puntos == 30 && puntoP2 == 15) { // 30 - 30
+            System.out.println("  " + puntos + "  vs  " + puntoP2);
+            pausa();
+        }if (puntos == 30 ) { // 30 - 30
              puntoP2 = 30;
-            System.out.println("  " + puntos + "  " + personaje1.getNombre() + "  vs  " + puntoP2 + "  P2  ");
-            //pausa();
-        }else if (puntos == 30 && puntoP2 == 30) { // 40 - 30
+            System.out.println("  " + puntos + "  vs  " + puntoP2);
+            pausa();
+        }if (puntos == 30) { // 40 - 30
             puntos = 40;
-            System.out.println("  " + puntos + "  " + personaje1.getNombre() + "  vs  " + puntoP2 + "  P2  ");
-            //pausa();
-        }else if (puntos == 40) { // Deuce - Deuce
+            System.out.println("  " + puntos + "  vs  " + puntoP2);
+            pausa();
+        }if (puntos == 40) { // Deuce - Deuce
             puntoP2 = 40;
             estado = "Deuce";
-            System.out.println("  " + estado + "  " + personaje1.getNombre() + "  vs  " + estado + "  P2  ");
-            //pausa();
-        }else if (estado == "Deuce") { // Ventaja P1 - Deuce
+            System.out.println("  " + estado + "  vs  " + estado);
+            pausa();
+        }if (estado == "Deuce") { // Ventaja P1 - Deuce
             estado = "Ventaja P1";
-            System.out.println("  " + estado + "  " + personaje1.getNombre() + "  vs  " + puntoP2 + "  P2  ");
-            //pausa();
-        }else if (estado == "Ventaja P1") { // Ha ganado P1
+            System.out.println("  " + estado + "  vs  " + puntoP2);
+            pausa();
+        }if (estado == "Ventaja P1") { // Ha ganado P1
             estado = "Ha ganado el P1";
-            //pausa();
+            pausa();
             System.out.println("  " + estado + "  " +personaje1.getNombre()+"  FELICITACIONES!...");
         }
 
-
     }
-    /*
+
     public void pausa(){
         try {
             Thread.sleep(1000);
@@ -171,6 +169,6 @@ public class ViewJuego {
             throw new RuntimeException(e);
         }
     }
-        */
+
 
 }
