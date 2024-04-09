@@ -12,8 +12,8 @@ public class Main {
 
         System.out.println("BIENVENIDO AL JUEGO DE TENIS!");
         System.out.println("MENU DE OPCIONES");
-        System.out.println("Seleccione 1 para PLAY ò 0 para EXIT");
-
+        System.out.println("PLAY (1)");
+        System.out.println("EXIT (0)");
         while (true){
             int opcion = scanner.nextInt();
 
